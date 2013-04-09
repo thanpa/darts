@@ -2,6 +2,9 @@
 /**
  * Entity abstraction.
  *
+ * <p>In this abstract class is the implementation of
+ * getters and setters for all entities in the system.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */

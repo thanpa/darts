@@ -3,6 +3,12 @@ require_once 'classes/entity.php';
 /**
  * Player entity.
  *
+ * <p>The player entity holds some information about the
+ * player.
+ * <p> This information are the name and the score left
+ * for winning the game. The score is set from the game
+ * when in starts.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */

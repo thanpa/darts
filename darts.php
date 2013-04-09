@@ -6,6 +6,7 @@ require_once 'classes/dart.php';
 require_once 'classes/console.php';
 $console = new Console();
 $game = new Game();
+// Get the two player names of this game!
 $playerOne = new Player();
 echo "Please provide player's one name:\n";
 $playerOne->name = $console->read();
@@ -16,6 +17,7 @@ echo "Please provide player's two name:\n";
 $playerTwo->name = $console->read();
 $playerTwo->score = $game->initialScore;
 $game->playerTwo = $playerTwo;
+// Start the game and run until there is a winner.
 while ($game->stillOn()) {
     $next = $game->next();
     echo "Next is {$game->$next->name}.\n";
@@ -25,8 +27,13 @@ while ($game->stillOn()) {
         ($game->$next->score <= 170) ? '' : 'not '
     );
     $turn = new Turn($game->$next);
+    // Keep gettng darts until the turn is ended.
     while(!$turn->ended()) {
         echo 'Dart hit: ';
+        // Get the value of the user.
+        // Keep in mind that the user can type a number
+        // or a number and a multiplier. Eg:
+        // 20 or 3x20
         $input = $console->read();
         $explodedInput = explode('x', $input);
         if (count($explodedInput) == 2) {
@@ -39,6 +46,7 @@ while ($game->stillOn()) {
         $dart = new Dart($hit, $multiplier);
         $turn->dart($dart);
     }
+    // Check if the user gone bust in this turn.
     if (!$turn->bust()) {
         echo "Not a bust ";
         $game->$next->score = ($game->$next->score - $turn->total());

@@ -3,6 +3,11 @@ require_once 'classes/entity.php';
 /**
  * Dart entity.
  *
+ * <p>Describes the dart hit on the dartboard.
+ * <p>Holding the multiplier andf the number of the hit,
+ * this object can give us the total of each dart on the
+ * dartboard.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */

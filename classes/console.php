@@ -2,6 +2,9 @@
 /**
  * Console entity.
  *
+ * <p>Used to read the input from the user running the
+ * program.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */

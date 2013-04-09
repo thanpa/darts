@@ -3,6 +3,12 @@ require_once 'classes/entity.php';
 /**
  * Game entity.
  *
+ * <p>This is the main heart of the game.
+ * <p>Holding the two players and the game type (301 or 501
+ * or even 701, 1001 in case the players are actually teams.)
+ * desides who is the winner of the current game and if the
+ * game is still on or not.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */

@@ -3,6 +3,13 @@ require_once 'classes/entity.php';
 /**
  * Turn entity.
  *
+ * <p>Each time a player has their turn, this object
+ * is initialized.
+ * <p>The system will create as many objects as the
+ * turns needed to finish the game.
+ * <p>In this object is also the logic of if the player
+ * gone bust form his hits or not.
+ *
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
