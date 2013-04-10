@@ -12,7 +12,7 @@ require_once 'classes/entity.php';
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
-class Player extends entity
+class Player extends Entity
 {
     /**
      * Holds the score of this player.

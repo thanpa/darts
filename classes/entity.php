@@ -8,7 +8,7 @@
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
-abstract class entity
+abstract class Entity
 {
     /**
      * Gets the entity variable if available.

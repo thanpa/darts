@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Darts Standard">
+    <description>Darts Standard Ruleset</description>
+    <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.ClassComment.TagIndent"/>
+        <exclude name="PEAR.Commenting.ClassComment.EmptyCopyright"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingTag"/>
+        <exclude name="PEAR.Commenting.FileComment.Missing"/>
+        <exclude name="PEAR.Commenting.FunctionComment.ParameterCommentsNotAligned"/>
+    </rule>
+</ruleset>

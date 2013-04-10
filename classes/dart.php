@@ -11,7 +11,7 @@ require_once 'classes/entity.php';
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
-class Dart extends entity
+class Dart extends Entity
 {
     /**
      * Holds the multiplier information of this dart.
@@ -30,16 +30,17 @@ class Dart extends entity
      *
      * @param int $hit The hit information.
      * @param int $multiplier The multiplier information.
+     *
      * @throws Exception In case the information provided are not accepted.
      */
     public function __construct($hit, $multiplier)
     {
         $correctHit = ($hit == 25) || ($hit == 50) || ($hit >= 0 && $hit <= 20);
         if (!is_numeric($hit) || !$correctHit) {
-            throw new Exception ('Hit needs to be a number between 0 and 20, 25 or 50.');
+            throw new Exception('Hit needs to be a number between 0 and 20, 25 or 50.');
         }
         if (!is_numeric($hit) || $multiplier < 1 || $multiplier > 3) {
-            throw new Exception ('Multiplier needs to be a number between 1 and 3.');
+            throw new Exception('Multiplier needs to be a number between 1 and 3.');
         }
         $this->_hit = $hit;
         $this->_multiplier = $multiplier;

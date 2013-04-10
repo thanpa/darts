@@ -13,7 +13,7 @@ require_once 'classes/entity.php';
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
-class Turn extends entity
+class Turn extends Entity
 {
     /**
      * How many darts per round.

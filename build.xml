@@ -10,6 +10,7 @@
     <target name="main" depends="phpcs, phpmd, phpunit"/>
     <target name="phpcs">
         <exec dir="." executable="phpcs" failonerror="true" logError="true">
+            <arg value="--standard=test/ruleset.xml"/>
             <arg value="--encoding=UTF-8"/>
             <arg value="--extensions=php"/>
             <arg value="-s"/>

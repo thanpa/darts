@@ -12,7 +12,7 @@ require_once 'classes/entity.php';
  * @author Thanasis Papapanagiotou <hello@thanpa.com>
  * @copyright (c) 2013, thanpa.com
  */
-class Game extends entity
+class Game extends Entity
 {
     /**
      * Holds the initial score of the game (game type).
