@@ -7,7 +7,7 @@
  -->
 <project name="darts" default="main" basedir=".">
     <tstamp/>
-    <target name="main" depends="phpcs, phpmd"/>
+    <target name="main" depends="phpcs, phpmd, phpunit"/>
     <target name="phpcs">
         <exec dir="." executable="phpcs" failonerror="true" logError="true">
             <arg value="--encoding=UTF-8"/>
@@ -28,10 +28,12 @@
         </exec>
         <echo message="PHPMD Success"/>
     </target>
-    <exec dir="." executable="phpunit" failonerror="true" logError="true">
-        <arg value="--no-configuration"/>
-        <arg value="--colors"/>
-        <arg value="--verbose"/>
-        <arg value="./test"/>
-    </exec>
+    <target name="phpunit">
+        <exec dir="." executable="phpunit" failonerror="true" logError="true">
+            <arg value="--no-configuration"/>
+            <arg value="--colors"/>
+            <arg value="--verbose"/>
+            <arg value="./test"/>
+        </exec>
+    </target>
 </project>

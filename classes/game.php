@@ -47,16 +47,7 @@ class Game extends entity
      */
     public function __construct($initialScore = 501)
     {
-        $acceptable = array(301, 501, 701, 1001);
-        if (!in_array($initialScore, $acceptable)) {
-            throw new Exception(
-                sprintf(
-                    'The initial score specified is not acceptable, please try %s',
-                    implode(', ', $acceptable)
-                )
-            );
-        }
-        $this->_initialScore = $initialScore;
+        $this->setInitialScore($initialScore);
         $this->_next = 'playerTwo';
     }
     /**
@@ -111,6 +102,15 @@ class Game extends entity
      */
     public function setInitialScore($score)
     {
+        $acceptable = array(301, 501, 701, 1001);
+        if (!in_array($score, $acceptable)) {
+            throw new Exception(
+                sprintf(
+                    'The initial score specified is not acceptable, please try %s',
+                    implode(', ', $acceptable)
+                )
+            );
+        }
         $this->_initialScore = $score;
     }
     /**
